@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="/wc/button.html">
+        <link rel="import" href="/wc/input_text.html">
+        <link rel="import" href="/wc/tile_it.html">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+        <style>
+            body {
+                font-family: 'Open Sans';
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h2>Extended Custom Element: Input Text</h2>
+            <input type="text" is="input-el"/>
+            <h2>Extended Custom Element: Button</h2>
+            <button is="button-el" type="submit">Button Your Face</button>
+        </form>
+
+        <h2>Custom Element with image and paragraph</h2>
+        <custom-tile img-src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG" tile-content="Test data here"></custom-tile>
+    </body>
+</html>

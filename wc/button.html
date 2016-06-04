@@ -1,0 +1,25 @@
+<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+<dom-module id="button-el">
+
+  <template>
+    <style>
+      :host {
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        height: 50px;
+        font-size: 20px;
+        background-color:#0060FF;
+        color: #FFF;
+      };
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: "button-el",
+      extends: "button"
+    });
+  </script>
+</dom-module>

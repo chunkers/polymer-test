@@ -1,0 +1,27 @@
+<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+<dom-module id="custom-tile">
+  <template>
+    <style>
+      :host {
+        
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+    <div>
+        <img src="{{imgSrc}}" />
+        <p>{{tileContent}}</p>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "custom-tile",
+      properties: {
+        imgSrc: "String",
+        tileContent: "String"
+      }
+    });
+  </script>
+</dom-module>
