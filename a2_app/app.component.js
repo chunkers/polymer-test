@@ -15,7 +15,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>Components in my-app</h1><h2>Extended Custom Element: Button</h2><button is="button-el" type="submit">Button Your Face</button>'
+            encapsulation: core_1.ViewEncapsulation.Native,
+            template: "<h1>Components in my-app</h1>\n  <h2>Extended Custom Element: Button</h2>\n  <button is=\"button-el\" type=\"submit\">Button Your Face</button>\n   <button is=\"simple-button-el\">in this</button>\n ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
