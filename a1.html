@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
+      <link rel="import" href="/wc/button.html">
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+   </head>
+   
+   <body ng-app = "myapp">
+      
+      <div ng-controller = "HelloController" >
+         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+      </div>
+
+      <test-el></test-el>
+
+      
+      <script>
+         angular.module("myapp", [])
+         
+         .controller("HelloController", function($scope) {
+            $scope.helloTo = {};
+            $scope.helloTo.title = "AngularJS";
+         })
+         .component('testEl', {
+            template: 'Stuff it <button is="button-el" type="submit">Button Your Face</button>',
+            controller: function TestElController() {}
+         });
+      </script>
+      
+   </body>
+</html>
