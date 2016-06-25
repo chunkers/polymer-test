@@ -2,26 +2,15 @@
   "name": "wc-poc",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+
   },
   "description": "",
   "main": "index.js",
   "dependencies": {
 
-  
   },
   "devDependencies": {
     "http-server": "^0.9.0",
-
-    "concurrently": "^2.0.0",
-    "lite-server": "^2.2.0",
-    "typescript": "^1.8.10",
-    "typings":"^1.0.4"
   },
   "author": "",
   "license": "ISC"
