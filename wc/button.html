@@ -19,7 +19,11 @@
   <script>
     Polymer({
       is: "button-el",
-      extends: "button"
+      extends: "button",
+      listeners: {
+        "tap": "testAlert"
+      },
+      testAlert: function (e) { console.log(e); }
     });
   </script>
 </dom-module>

@@ -3,7 +3,7 @@
   <template>
     <style>
       :host {
-        
+
       }
       img {
         width: 200px;
@@ -12,6 +12,7 @@
     <div>
         <img src="{{imgSrc}}" />
         <p>{{tileContent}} <a href="test">link</a></p>
+        <div id="someDiv">Click it</div>
     </div>
   </template>
 
@@ -21,6 +22,12 @@
       properties: {
         imgSrc: "String",
         tileContent: "String"
+      },
+      listeners: {
+        'someDiv.tap': "tapThat"
+      },
+      tapThat: function (e) {
+        console.log(this.tileContent)
       }
     });
   </script>

@@ -1,33 +1,45 @@
 <!doctype html>
 <html>
-   
+
    <head>
-      <script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
       <link rel="import" href="/wc/button.html">
+      <link rel="import" href="/wc/tile_it.html">
       <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
    </head>
-   
+
    <body ng-app = "myapp">
-      
+
       <div ng-controller = "HelloController" >
-         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+         <h2>Expression: {{helloTo.title}} </h2>
+
+         <ul>
+           <li ng-repeat="item in items">
+             <custom-tile img-src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG" tile-content="{{item.text}}"></custom-tile>
+           </li>
+         </ul>
+
       </div>
 
       <test-el></test-el>
 
-      
+
       <script>
          angular.module("myapp", [])
-         
+
          .controller("HelloController", function($scope) {
             $scope.helloTo = {};
             $scope.helloTo.title = "AngularJS";
+            $scope.items = [
+              {text: "description 1"},
+              {text: "description 2"},
+            ]
          })
          .component('testEl', {
             template: 'Stuff it <button is="button-el" type="submit">Button Your Face</button>',
             controller: function TestElController() {}
          });
       </script>
-      
+
    </body>
 </html>
